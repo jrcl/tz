@@ -140,6 +140,93 @@ nav {
         display:block;
       }
 
+    .firma {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      #background-image: url(./firma1.png);
+      height: 142px;
+      width: 670px;
+      background-color: white;
+    }
+
+    .firma .left-block {
+      position: absolute;
+      bottom: 0;
+      left: -670px;
+      height: 0;
+      width: 50px;
+      border-bottom: 142px solid red;
+      border-right: 25px solid transparent;
+    }
+
+    .firma #shadow .right-block2 {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+      position: absolute;
+      overflow: hidden;
+      bottom: 0;
+      right: 0;
+      height: 142px;
+      width: 490px;
+      background-color: red;
+    }
+
+    .firma .chevron {
+      clip-path: polygon(90% 0%, 100% 23%, 60% 100%, 0% 100%, 39% 23%, 29% 0%);
+      position: absolute;
+      bottom: 0;
+      #left: 184px;
+      left: -486px;
+      height: 142px;
+      width: 142px;
+      background-color: rgba(255, 0, 0, 1);
+    }
+
+    .firma .chevron2 {
+      clip-path: polygon(90% 0%, 100% 23%, 44% 100%, 0% 100%, 57% 23%, 44% 0%);
+      position: absolute;
+      bottom: 0;
+      #left: 0px;
+      left: -445px;
+      height: 142px;
+      width: 100px;
+      background-color: rgba( 255, 0 , 0, 1);
+    }
+
+    .firma span {
+      position: relative;
+      bottom: 0;
+      left: 30px;
+    }
+
+
+    #shadow {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      filter: drop-shadow(-5px 0px 10px rgba(0,0,0,.4));
+    }
+
+    .textofirma {
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding-bottom: 40px;
+      padding-right: 25px;
+
+      color: black;
+      -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #FF1205;
+      font-size: 50px;
+      font-family: sans-serif;
+      text-shadow: 3px 3px 4px black;
+      #text-transform: uppercase;
+    }
+
+
 
 </style>
 
@@ -212,7 +299,35 @@ nav {
         </td>
       </tr> 
       <tr> 
-        <td><img src="https://i.ibb.co/vzm3RxW/firma2.png" class="center" /></td> 
+        <td>
+        <div class="firma">
+          <div id="shadow">
+            <div class="left-block"></div>
+          </div>
+          
+          <div id="shadow">
+            <div class="right-block2">
+              <div class="textofirma"><strong>Bugicadren</strong></div>
+            </div>
+          </div>
+
+          <div id="shadow">
+            <div class="chevron"> 
+            </div>
+          </div>
+
+
+          <div id="shadow">
+            <div class="chevron2"></div>
+          </div>
+          
+          <span>
+            <img style="height: 142px;" src="./images/playerfirma.png">
+
+          </span>
+        </div>
+        <br>
+        </td> 
       </tr> 
     </tbody> 
   </table> 
