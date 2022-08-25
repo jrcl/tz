@@ -125,6 +125,7 @@
 	       <!-- Your edit goes here-->
 	       <style type="text/css">
 	       	.portada{
+	       		position:relative;
 			    background-image: url('./images/pre-portada.png');
 			    background-size: cover;
 			    width: 800px;
@@ -194,7 +195,70 @@
 			  display:block;
 			}
 
+			/* Bar Code */
+
+
+			.noselect {
+					  -webkit-touch-callout: none;
+					    -webkit-user-select: none;
+					     -khtml-user-select: none;
+					       -moz-user-select: none;
+					        -ms-user-select: none;
+					            user-select: none;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			.barra {
+				cursor: pointer;
+				font-family: 'Libre Barcode 39 Text', cursive;
+				font-size: 40px;
+				color: #2e518b;
+				background: none;
+				border: none;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				padding: 20px;
+			}
+
+			.barra:before {
+				content: '';
+				position: absolute;
+				width: 178px;
+				height: 5px;
+				transform: translateX(-3px) translateY(-5px);
+				background: rgba(255,0,0,0.0);
+				transition: 500ms;
+			}
+
+			.barra:hover:before {
+				animation: line 1000ms forwards;
+			}
+
+			.barra:hover {
+				animation: blink 300ms 500ms;
+			}
+
+			@keyframes line {
+				from { background: rgba(255,0,0,0.8);}
+				to {
+					background: rgba(255,0,0,0.8);
+					transform: translateX(-3px) translateY(38px);
+				}
+			}
+
+			@keyframes blink {
+				from {color: #eee;}
+				to {color: gray;}
+			}
+
+
+			.barra:focus {
+				outline: none;
+			}
+
 	       </style>
+	       <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
 
 	       <td valign=top width=800 class="head"><strong>PORTADA - DEMO</strong>
 	 	     <p class="text">
@@ -222,11 +286,17 @@
 	 	     						<li><a href="./finanzas.html">Finanzas</a></li>
 	 	     						<li><a href="#">Mercado</a></li>
 	 	     						<li><a href="#">Entrevista</a></li>
-	 	     						<li><a href="#">Créditos</a></li>
 	 	     					</ul>
 	 	     				</li>
 	 	     			</ul>
 	 	     		</nav>
+
+	 	     		<span class="noselect">
+	 	     			<div class="barra">
+	 	     				TZPH-0003	 	     				
+	 	     			</div>
+	 	     		</span>
+
 	 	     	</div>
 		     </p>
 		     </font>
