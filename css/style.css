@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Merit';
+    src: URL('https://raw.githubusercontent.com/jrcl/tz/gh-pages/fonts/merit.ttf') format('truetype');
+}
 body {
     background-image: url("https://raw.githubusercontent.com/jrcl/tz/gh-pages/images/stadium.png");
     /* background-image: url("./images/stadium.png"); */
@@ -37,7 +41,6 @@ h3 {
 
 nav {
     text-align: center;
-
     /* margin-left: auto;
     margin-right: auto; */
     padding-top: 10px;
@@ -55,7 +58,8 @@ table {
     border-spacing: 4px;
     border-collapse: separate;
 }
-.tb-titulo span{
+
+.tb-titulo span {
     font-size: 18px;
     font-weight: bold;
     font-family: tahoma, arial, helvetica, sans-serif;
@@ -73,6 +77,7 @@ table {
     list-style: none;
     margin: 0;
     padding: 0px;
+    z-index: 1;
 }
 
 #menu ul a {
@@ -119,4 +124,211 @@ table {
 
 #menu ul li:hover>ul {
     display: block;
+}
+
+/* TITULO */
+.titulo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    position: relative;
+    /* overflow: hidden; */
+    height: 142px;
+    width: 672px;
+    background-color: white;
+    z-index: 0;
+}
+.titulo span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.titulo .right-block {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 19% 100%);
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    height: 142px;
+    width: 510px;
+    background-color: #ef0519;
+    /* background-color: rgba(0, 255, 0, .2); */
+}
+
+.titulo .right-block .gradient-block {
+    clip-path: polygon(0 0, 28% 0, 100% 100%, 72% 100%);
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 197px;
+    height: 142px;
+    width: 138px;
+    /* background: rgb(34,193,195); */
+    background: linear-gradient(0deg, #8b231d 20%, #ef0519 100%);
+    /* background-color: rgba(0, 255, 0, .2); */
+}
+
+.titulo .right-block .slice-block1 {
+    clip-path: polygon(0 0, 28% 0, 100% 100%, 72% 100%);
+    position: absolute;
+    bottom: 0;
+    right: 386px;
+    height: 105px;
+    width: 100px;
+    /* background: rgb(34,193,195); */
+    /* background: linear-gradient(0deg, #8b231d 40%, #ef0519 100%); */
+    background-color: 8b231d;
+}
+
+.titulo .right-block .slice-block2 {
+    clip-path: polygon(0 0, 28% 0, 100% 100%, 72% 100%);
+    position: absolute;
+    top: 0;
+    right: 303px;
+    height: 125px;
+    width: 122px;
+    /* background: rgba(34,193,195,5); */
+    background: linear-gradient(0deg, #8b231d 25%, #ef0519 100%);
+    /* background-color: 8b231d; */
+}
+
+.titulo .right-block .slice-block3 {
+    clip-path: polygon(0 0, 28% 0, 100% 100%, 72% 100%);
+    position: absolute;
+    top: 0;
+    right: 275px;
+    height: 80px;
+    width: 78px;
+    /* background: rgba(34,193,195,5); */
+    background: linear-gradient(0deg, #8b231d 20%, #ef0519 100%);
+    /* background-color: 8b231d; */
+}
+
+.stroke-text {
+    /* position: relative; */
+    font-size: 42px;
+    font-family: Merit;
+    letter-spacing: 3px;
+    /* position: absolute; */
+    top: 100px;
+    right: 205px;
+    text-align: center;
+    text-anchor: middle;
+    stroke: #ef0519;
+    stroke-width: 2px;
+    fill: white;
+}
+
+.thick {
+    stroke-width: 5px;
+}
+
+.thicker {
+    stroke-width: 12px;
+}
+
+.color1 {
+    stroke: white;
+}
+
+
+/* FIRMA */
+.firma {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    /* background-image: url(./firma1.png); */
+    height: 142px;
+    width: 670px;
+    background-color: white;
+}
+
+.firma .left-block {
+    position: absolute;
+    bottom: 0;
+    left: -670px;
+    height: 0;
+    width: 50px;
+    border-bottom: 142px solid #ef0519;
+    border-right: 25px solid transparent;
+}
+
+.firma #shadow .right-block2 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    height: 142px;
+    width: 490px;
+    background-color: #ef0519;
+}
+
+.firma .chevron {
+    clip-path: polygon(90% 0%, 100% 23%, 60% 100%, 0% 100%, 39% 23%, 29% 0%);
+    position: absolute;
+    bottom: 0;
+    /* left: 184px; */
+    left: -486px;
+    height: 142px;
+    width: 142px;
+    background-color: #ef0519;
+}
+
+.firma .chevron2 {
+    clip-path: polygon(90% 0%, 100% 23%, 44% 100%, 0% 100%, 57% 23%, 44% 0%);
+    position: absolute;
+    bottom: 0;
+    left: -445px;
+    height: 142px;
+    width: 100px;
+    background-color: #ef0519;
+}
+
+.firma span {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+
+
+#shadow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    filter: drop-shadow(-5px 0px 10px rgba(0, 0, 0, .4));
+}
+
+.textofirma {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+
+
+    color: black;
+    -webkit-text-fill-color: #ef0519;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    font-size: 40px;
+    font-family: Merit, sans-serif;
+    letter-spacing: 4px;
+    /* text-shadow: 3px 3px 4px black; */
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    /* text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    0px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white; */
+    text-align: right;
+    /* z-index: 3; */
+    /*text-transform: uppercase;*/
+    /* filter:url(#stroke-text-svg-filter); */
+
 }
